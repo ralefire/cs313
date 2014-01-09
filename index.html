@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Cameron Lilly's Home Page</title>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+    </head>
+    <script type="text/javascript">
+        
+    function loadDoc(id, file) {
+        
+                    var xmlhttp;
+
+                    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp = new XMLHttpRequest();
+                    } else { // code for IE6, IE5
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange = function() {
+                        
+                        //alert(file);
+                        //alert(xmlhttp.readyState);
+                        //alert(xmlhttp.status);
+                        
+                        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                            document.getElementById('changeMe').innerHTML = xmlhttp.responseText;
+                        }
+    
+                    }
+                    
+                    xmlhttp.open("GET", file, true);
+                    xmlhttp.send(null);
+        
+                    changeTab(id);
+                }
+
+        function changeTab(id)
+        {
+            if (id == 'leftTab')
+            {
+                document.getElementById(id).style.zIndex="3";
+                document.getElementById('rightTab').style.zIndex="1";
+            }
+            else
+            {
+                document.getElementById(id).style.zIndex="3";
+                document.getElementById('leftTab').style.zIndex="1";
+            }
+        }
+        
+    </script>
+    <body onload="loadDoc('leftTab', 'aboutMe.html')">
+        <header id="outerNav">
+                <nav id="navigation">
+                    <ul>
+                        <li>
+                            <a href="assignments.html">Assignments</a>
+                        </li>
+                    </ul>
+                    <ul id="floatLeft">
+                        <li>
+                            <a href="http://www.byui.edu/">Byu-i</a>
+                        </li>
+                        <li>
+                            <a href="http://www.google.com">Google</a>
+                        </li>
+                        <li>
+                            <a href="http://www.w3schools.com/">w3Schools</a>
+                        </li>
+                    </ul>
+                </nav>  
+        </header>
+        <div id="headSpace"></div>
+        
+        <h1 id="mainTitle">Cameron Lilly's Home Page</h1>
+        <div class="center">
+            <div id="tab">
+                <a id="leftTab" onclick="loadDoc('leftTab', 'aboutMe.html')">About Me</a>
+                <a id="rightTab" onclick="loadDoc('rightTab', 'myFamily.html')">My Family</a>
+            </div>
+            
+            <div class="outerBody" id="homeDesc">
+                <div id=changeMe></div>
+            </div>
+        </div>
+    </body>
+</html>

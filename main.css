@@ -1,0 +1,276 @@
+@charset"utf-8";
+
+/* CSS Document */
+/*  
+COLORS:
+    h1 #455068
+    h2 #F7931E
+    nav #38add6
+    border #B2DDFB
+    body #F5F5F5
+*/
+ body {
+    font-family:"Myriad Pro", sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+    margin: 0;
+}
+
+h1 {
+    text-align:center;
+    font-weight: normal;
+    font-size: 40pt;
+    color: #455068;
+}
+
+h2 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 20pt;
+    color: #F7931E;
+    text-align:center;
+    
+}
+
+a:link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #38add6;
+    text-decoration: none;
+    background-color: #F7931E;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+footer {
+    height: 25px;
+    width: 100%;
+    line-height: 25px;
+    background-color: #B2DDFB;
+    position: absolute;
+    bottom: 0; 
+}
+
+.outerBody {
+    width: 750px;
+    position: relative;
+    background-color: white;
+    margin: 0px auto;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #B2DDFB;
+}
+
+.center h1 {
+    text-align:left;
+}
+
+#outerNav {
+    height: 30px;
+    background-color: #68C1FF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 750px;
+    width:100%;
+    z-index: 2;
+}
+
+#navigation ul {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#navigation li {
+	list-style: none;
+	list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation a {
+    font-family: "Myriad Pro", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    padding: 0 10px 0 10px;
+    line-height: 30px;
+    border: 0;
+    margin: 0;
+}
+
+table {
+    font-family: "Myriad Pro", sans-serif;
+    border-collapse:collapse;
+    border: 0;
+    width: 100%;
+}
+
+th {
+    font-family: "Myriad Pro", sans-serif; 
+    background-color: white;
+    color: #4D4D4D;
+}
+
+td {
+    padding: 5px;
+    
+}
+
+table, td, th {
+    border-color: #68C1FF;
+
+}
+
+input, textarea {
+    border:none;
+    border-radius: 3px;
+
+}
+
+
+.clear {
+    clear:both;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#floatLeft {
+    float: left;
+}
+
+#navigation {
+}
+
+#headSpace {
+    margin-bottom:40px;
+}
+
+#aboutMe {
+    padding:5px;
+    height: 306px;
+}
+
+#myPic {
+    float:left;
+    margin-right: 20px;
+}
+
+dt {
+    font-weight:600;
+}
+
+dd {
+    margin: 0 0 5px 0;
+}
+
+blockquote {
+    margin:2px;
+}
+
+.subHead {
+   
+}
+
+#assignmentNav ul {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#assignmentNav li {
+	list-style: none;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+#assignmentNav a {
+    font-family: "Myriad Pro", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    text-align:center;
+    color: black;
+    display: block;
+    padding: 10px;
+    line-height: 30px;
+    margin: 1px;
+    border: 0;
+    background-color: #FFFFFF ;
+    border-color: #666666; 
+    border-style: solid;
+
+}
+
+#assignmentNav a:hover{
+    background-color: #F7931E;
+    color: white;
+}
+.center {
+    width: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#homeDesc {
+    position:relative;
+    border-radius: 0 5px 5px 5px;
+    z-index: 2;
+}
+
+#tab a {
+    position: relative;
+    padding: 2px;
+    background-color: white;
+    border-width: 2px 2px 0 2px; 
+    border-style: solid;
+    border-radius: 5px 5px 0 0;
+    border-color: #B2DDFB;
+
+}
+
+
+
+.selected {
+    z-index: 3;
+}
+
+#leftTab {
+    position:relative;
+    top: 2px;
+    margin: 0 2px 0 0;
+    z-index: 3;
+    
+}
+
+#tab {
+}
+
+#rightTab {
+    position:relative;
+    top: 2px;
+    background-color: #F5F5F5;
+}
+
+#mainTitle {
+    margin: 0 0 20px 0;
+}
