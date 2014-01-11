@@ -32,6 +32,14 @@
                     xmlhttp.send(null);
         
                     changeTab(id);
+        
+                    if (navigator.appVersion.indexOf("Win")!=-1)
+                    {
+                        document.getElementById('leftTab').style.top="-2px";
+                        document.getElementById('rightTab').style.top="-2px";
+                    }
+        
+                    //if (navigator.appVersion.indexOf("Mac")!=-1);
                 }
 
         function changeTab(id)
@@ -49,6 +57,7 @@
         }
         
     </script>
+
     <body onload="loadDoc('leftTab', 'aboutMe.html')">
         <header id="outerNav">
                 <nav id="navigation">
