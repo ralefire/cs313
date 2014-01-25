@@ -1,0 +1,14 @@
+
+#bucket {
+    display:block;
+    height: 30px;
+    width: 200px;
+    background-color: orange;
+    margin: 0 auto;
+}
+
+#alsoBucket {
+    background-color: blue;
+}
+
+

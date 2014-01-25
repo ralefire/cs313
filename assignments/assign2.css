@@ -1,0 +1,80 @@
+h3 {
+    margin: 10px 0 0 0;
+}
+
+a:visted {
+
+    color:black;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #38add6;
+    text-decoration: none;
+}
+
+table th {
+    border-color: #666666;
+    text-align:left;
+}
+
+table td {
+    border-color: #666666;
+}
+
+h4 {
+    color: #666666;
+    font-weight:400;
+}
+
+ul {
+
+    padding-left: 20px;
+
+}
+#thePadding {
+    padding: 10px;
+}
+
+#inline {
+    display:inline;
+}
+
+.leftIndent {
+    position:relative;
+    
+    margin-left: 20px;
+}
+
+.floatMeLeft {
+    float:left;
+    height: 180px;
+    width: 400px;
+}
+
+#smaller {
+    height: 50px;
+}
+
+.submit {
+    color: blue;
+}
+
+.submit:hover {
+    color: black;
+}
+
+.submit a:visited {
+    color: blue;
+}
+
+.submit a:hover {
+    background-color:transparent;
+    color: black;
+}
+
+
