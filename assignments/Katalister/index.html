@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Katalister</title>
+        <link rel="stylesheet" type="text/css" href="project4.css" />
+                <link href="css/jquery-ui.css" rel="stylesheet">
+        <script>
+            function parseTheWorld()
+            {
+                var search = document.getElementsByName('search')[0].value;
+                var trArray = (document.getElementsByTagName("tr"));
+                var foundSomething = false;
+                //var temp = trArray.innerHeight.toLowerCase();
+                
+                if (search != "")
+                {
+                    search = search.toLowerCase();
+                    
+                    for (var i = 1; i < trArray.length; i++)
+                    { 
+                        trArray[i].setAttribute("style", "display:none");
+                        var searchString = trArray[i].innerHTML.toLowerCase();
+                        //alert(searchString);
+                        if (searchString.search(search) > 0)
+                        {
+                            trArray[i].setAttribute("style", "display:visible");
+                            foundSomething = true;
+                        }
+                    }
+                    
+                    if (foundSomething == false)
+                    {
+                        document.getElementById('fNothing').setAttribute("style", "display:visible");
+                    }
+                    else
+                    {
+                        document.getElementById('fNothing').setAttribute("style", "display:none");
+                    }
+                }
+                else
+                {
+                    for (var i = 1; i < trArray.length; i++)
+                    { 
+                        trArray[i].setAttribute("style", "display:visible");
+                    }
+                    
+                    document.getElementById('fNothing').setAttribute("style", "display:none");
+                }
+            }
+        </script>
+        <script>
+        function load(id, callerName, callerID) {
+            
+                var url = "http://ec2-54-209-227-242.compute-1.amazonaws.com/assignments/Katalister/items.php?type=" + callerName;
+                var httprequest = null;
+                if (window.XMLHttpRequest) {
+                    httprequest = new XMLHttpRequest();
+                } else {
+                    try {
+                        httprequest = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (ex) {
+                        alert("This webpage cannot load in your browser.\nPlease update your browser.");
+                    }
+                }
+
+                httprequest.onreadystatechange = function () {
+                    if (httprequest.readyState == 4)
+                        if (httprequest.status == 200) {
+                            document.getElementById(id).innerHTML = httprequest.responseText;
+                        } else {
+                            alert("Error loading page.\nPlease try again.");
+                        }
+                }
+               
+                
+                httprequest.open("GET", url, true);
+                httprequest.send(null);
+            
+                selection(callerID);
+            }
+        </script>
+        <script>
+            function selection(callerID)  {
+                
+                var selElements = document.getElementsByClassName('sel');
+                
+                for (var i = 0; i < selElements.length; i++)
+                {
+                    selElements[i].setAttribute("style", "background-color: none");
+                }
+                
+                document.getElementById(callerID).setAttribute("style", "background-color:#8CCBF9");
+                
+                
+            }
+        </script>
+
+
+        <script type="text/javascript" src="util-functions.js"></script>
+        <script type="text/javascript" src="clear-default-text.js"></script>
+    </head>
+    
+    <body onload="load('changeMe', 'vehicles', 'v')" onkeydown="if (event.keyCode == 13) parseTheWorld()" name="body"> 
+        <header>
+            <div id="header">
+                <img src="images/TheLocalMarketplace.png" id="titlepic" width="350px;" alt="The Local Marketplace" />
+            </div>
+            
+            <div id="outerNav">
+                <nav id="navigation">
+                    <ul>
+                        <li id="market">
+                            <a href="project4.html" id="theMarket" style="color: #F7931E;">Market</a>
+                        </li>
+                        <li>
+                            <a href="deals.html" id="deals">Deals</a>
+                        </li>
+                        <li>
+                            <a href="jobs.html" id="jobs">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="events.html" id="events">Events</a>
+                        </li> 
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        
+        <div id="biggerBox">
+        <div id="leftNav">
+            <div id="navContent">
+                <h3 class="leftNavTitle">Pick a Category</h3>
+                    <input type="text" placeholder="Search..." name="search" id="search"/>
+                    <input type="button" value=" " onclick="parseTheWorld()" id="searchButton"/>
+                <ul class="categories">
+                   <a href="#" onclick="load('changeMe', 'vehicles', 'v')" id="v" class="sel"> <div id="vehicles" class="leftNavPic"></div><li>vehicles</li></a>
+                    <a href="#" onclick="load('changeMe', 'electronics', 'e')" id="e" class="sel"><div id="electronics" class="leftNavPic"></div><li>electronics</li></a>
+                    <a href="#" onclick="load('changeMe', 'appliances', 'a')" id="a" class="sel"><div id="appliances" class="leftNavPic"></div> <li>appliances</li></a>
+                    <a href="#" onclick="load('changeMe', 'furniture', 'f')" id="f" class="sel"><div id="furniture" class="leftNavPic"></div> <li>furniture</li></a>
+                    <a href="#" onclick="load('changeMe', 'housing', 'h')" id="h" class="sel"><div id="housing" class="leftNavPic"></div> <li>housing</li></a>
+                    <a href="#" onclick="load('changeMe', 'clothing', 'c')" id="c" class="sel"><div id="cAndA" class="leftNavPic"></div> <li>clothing &#38; apparel</li></a>
+                    <a href="#" onclick="load('changeMe', 'general', 'g')" id="g" class="sel"><div id="general" class="leftNavPic"></div> <li>general</li></a>
+                </ul>
+                <!--<div class="whiteIcon"></div>-->
+            </div>
+        </div>
+            
+        <div class="outerBody" id="outerBody">
+
+                    <div id="tableHead"></div>
+                 <div id="changeMe"></div>
+        </div>
+        <div id="bottomTitle"><h1>Katalister</h1></div>
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

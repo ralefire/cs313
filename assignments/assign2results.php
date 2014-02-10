@@ -84,23 +84,6 @@ echo "<h3>Activities</h3>
 
     </table>";
 
-/*
-$options = array("Please, no.", "I'll watch", "I'll enjoy it", "Yes! Lets do it!");
-for ($i = 5; $i < 30; $i += 5)
-{
-    echo $results[$i];
-    
-    echo $options[0]. "...........<strong>";
-    echo $results[$i + 1]. "</strong><br />";
-    echo $options[1]. "...............<strong>";
-    echo $results[$i + 2]. "</strong><br />";
-    echo $options[2]. "............<strong>";
-    echo $results[$i + 3]. "</strong><br />";
-    echo $options[3]. "...<strong>";
-    echo $results[$i + 4]. "</strong><br />";
-}
-*/
-
 for ($i = 0; $i < filesize($filename); $i++)
 {
     $output .= $results[$i]; 
