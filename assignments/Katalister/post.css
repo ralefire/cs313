@@ -1,0 +1,134 @@
+#postNav ul {
+    list-style: none;
+    margin: auto;
+    color: #444444;
+    min-width: 500px;
+    padding: 0;
+}
+
+#postNav li {
+    float:left;
+    padding: 0 20px 10px 0;
+    font-size: 14pt;
+}
+
+.selected {
+    color: #F7931E;
+}
+
+#postForm {
+    padding: 0;
+    width: 750px;
+    margin: auto;
+}
+
+.done {
+    font-weight: 14pt;
+    color: #AAAAAA;
+}
+
+input[type="button"], input[type="submit"] {
+    background-color: #1C6FA1;
+    border: none;
+    color: #FFFFFF;
+    font-size: 10pt;
+    padding: 7px 20px;
+}
+
+input[type="text"] {
+    background-color: #AAAAAA;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+    color: #FFFFFF;
+}
+
+input[type="number"] {
+    background-color: #AAAAAA;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+    color: #FFFFFF;
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #FFFFFF;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #FFFFFF;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #FFFFFF;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #FFFFFF;
+}
+
+select {
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    border-radius: 0;
+    margin: 3px;
+    padding: 5px;
+    color: #FFFFFF;
+    background: #AAAAAA url(images/arrow.png) no-repeat;
+    background-size: 25px;
+    background-position: right;
+}
+
+textarea {
+    background-color: #AAAAAA;
+    font-family: sans-serif;
+    border: none;
+    width: 350px;
+    max-width: 350px;
+    min-width: 350px;
+    min-height: 100px;
+    padding: 5px; 
+    margin: 3px; 
+    color: #FFFFFF;
+}
+
+.sideText {
+    width: 259px;
+}
+.sideNumber {
+    width: 100px;
+}
+.sideSelect { 
+    width: 150px;
+}
+
+#quickList {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+#quickList li {
+    float: left;
+    padding: 10px;
+}
+
+#inputDiv {
+    width: 360px;
+}
+
+#category {
+    height:26px;
+}
+
+.resultsDisplay { 
+    height:210px;
+    color: black;
+    background-color: #D1EAFD;
+    padding:20px;
+}
+
+.hideMe {
+    visibility:hidden;
+}
